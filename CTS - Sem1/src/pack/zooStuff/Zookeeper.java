@@ -10,7 +10,7 @@ public class Zookeeper {
 	}
 
 	public void feed(Animal animal) {
-		System.out.println("Hraneste animalul" + animal.getName() + " a fost hranit");
+		System.out.println("Animalul " + animal.getName() + " a fost hranit");
 	}
 	
 }
