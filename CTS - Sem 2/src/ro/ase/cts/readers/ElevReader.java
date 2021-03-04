@@ -6,14 +6,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import ro.ase.cts.classes.Elev;
+import ro.ase.cts.classes.*;
 
-public class ElevReader {
+public class ElevReader extends ApplicantReader{
 
-	public static List<Elev> readPupil(String file) throws FileNotFoundException {
-		Scanner input2 = new Scanner(new File(file));
+	public ElevReader(String file) {
+		super(file);
+		// TODO Auto-generated constructor stub
+	}
+
+	public List<Aplicant> citesteAplicanti() throws FileNotFoundException {
+		Scanner input2 = new Scanner(new File(super.getFile()));
 		input2.useDelimiter(",|\n");
-		List<Elev> elevi = new ArrayList<Elev>();
+		List<Aplicant> elevi = new ArrayList<Aplicant>();
 
 		while (input2.hasNext()) {
 			String nume = input2.next();
